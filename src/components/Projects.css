@@ -1,0 +1,10 @@
+.projects {
+  height: 100vh;
+  width: 100%;
+  background-color: lightgray;
+  background: url(../images/image3.jpg) no-repeat center center/cover;
+
+  font-family: 'arial', serif;
+  display: flex;
+  flex-direction: column;
+}
