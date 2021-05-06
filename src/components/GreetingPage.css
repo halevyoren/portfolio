@@ -79,6 +79,9 @@
   .title h3 {
     font-size: 2rem;
   }
+  .greeting-page {
+    background-attachment: scroll;
+  }
 }
 
 /* @media (max-width: 770px) {

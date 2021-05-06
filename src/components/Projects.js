@@ -92,7 +92,7 @@ const Projects = () => {
         <div className='project-list'>
           {projects.map((project, index) => (
             <div key={index}>
-              {index % 2 === 0 ? (
+              {index % 2 === 0 || window.innerWidth <= 800 ? ( //projects in even places or small screen
                 <div className='project'>
                   {description(index)}
                   {image(index)}

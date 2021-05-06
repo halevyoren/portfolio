@@ -171,4 +171,8 @@
   .skill {
     margin: 1rem 0;
   }
+
+  .about .card {
+    width: 80%;
+  }
 }

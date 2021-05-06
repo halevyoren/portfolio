@@ -110,4 +110,17 @@
     max-height: 200px;
     max-width: 200px;
   }
+
+  .project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .project .description {
+    padding-top: 0;
+  }
+  .description h1 {
+    margin-bottom: 0;
+  }
 }
