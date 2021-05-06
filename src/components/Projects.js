@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SocialNetworkImage from '../images/social-network.png';
 import SnakeGameImage from '../images/snake-game.jpeg';
 import TicTacToeGameImage from '../images/tic-tac-toe-game.png';
 import CheckersGameImage from '../images/checkers-game.png';
@@ -7,6 +8,14 @@ import './Projects.css';
 
 const Projects = () => {
   const projects = [
+    {
+      gameURL: 'https://developer-social-website.herokuapp.com/',
+      githubClientURL:
+        'https://github.com/halevyoren/full-stack-social-network-client-MERN',
+      githubServerURL:
+        'https://github.com/halevyoren/full-stack-social-network-server-MERN',
+      image: SocialNetworkImage
+    },
     {
       gameURL: 'https://oren-snake-game.herokuapp.com/',
       githubURL: 'https://github.com/halevyoren/Snake-game---react',
@@ -24,6 +33,11 @@ const Projects = () => {
     }
   ];
   const projectsDescription = [
+    {
+      title: 'Social network',
+      description:
+        'A full stack social network for developers in which you can create a profile and then post, like, and comment'
+    },
     {
       title: 'Snake',
       description:
@@ -52,11 +66,16 @@ const Projects = () => {
     <div className='image-and-links'>
       <img src={projects[index].image} alt='' />
       <div className='links'>
+        <a href={projects[index].gameURL}>Play game</a>
         <div>
-          <a href={projects[index].gameURL}>Play game</a>
-        </div>
-        <div>
-          <a href={projects[index].githubURL}>Github</a>
+          {index === 0 ? (
+            <div className='social-network'>
+              <a href={projects[index].githubClientURL}>Github Client</a>
+              <a href={projects[index].githubServerURL}>Github Server</a>
+            </div>
+          ) : (
+            <a href={projects[index].githubURL}>Github</a>
+          )}
         </div>
       </div>
     </div>

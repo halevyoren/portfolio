@@ -32,6 +32,18 @@
   margin: auto;
 }
 
+.social-network {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-list h1 {
   margin-top: 0.5rem;
 }
