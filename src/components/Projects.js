@@ -66,7 +66,9 @@ const Projects = () => {
     <div className='image-and-links'>
       <img src={projects[index].image} alt='' />
       <div className='links'>
-        <a href={projects[index].gameURL}>Play game</a>
+        <a href={projects[index].gameURL}>
+          {index === 0 ? 'Enter site' : 'Play game'}
+        </a>
         <div>
           {index === 0 ? (
             <div className='social-network'>
