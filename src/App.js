@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <GreetingPage id='greeting-page' />
       <About id='about' />
-      <Projects />
+        <Projects />
       <Contact />
     </Fragment>
   );
