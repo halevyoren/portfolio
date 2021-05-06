@@ -1,0 +1,33 @@
+.contact {
+  height: 100vh;
+}
+.contact-info-container {
+  display: flex;
+  height: 60%;
+  align-items: center;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lightgray;
+  border-radius: 300px;
+  margin: auto;
+  width: 60%;
+}
+.contact .title {
+  margin-bottom: 4rem;
+}
+
+.contact-links {
+  font-size: 2rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+}
+.contact-link a {
+  color: rgb(0, 128, 128);
+  text-decoration: none;
+}

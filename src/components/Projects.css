@@ -75,8 +75,13 @@
 }
 
 .image-and-links a {
-  color: blue;
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  padding: 1rem;
   font-size: 1.2rem;
+}
+.image-and-links a:hover {
+  background-color: lightgray;
 }
 
 @media (max-width: 800px) {

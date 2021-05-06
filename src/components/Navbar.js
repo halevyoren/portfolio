@@ -14,10 +14,6 @@ const Navbar = () => {
   const [afterAboutPosition, setAfterAboutPosition] = useState(0);
 
   const listenScrollEvent = (e) => {
-    console.log('scroll: ' + window.scrollY);
-    console.log(
-      'pagePosition + afterAboutPosition: ' + pagePosition + afterAboutPosition
-    );
     // console.log('pagePosition: ' + pagePosition);
     // console.log('afterAboutPosition: ' + afterAboutPosition);
     setPagePosition(window.scrollY);
@@ -82,7 +78,8 @@ const Navbar = () => {
           <LinkScroll
             to='about'
             className={
-              pagePosition >= 540 && pagePosition - afterAboutPosition < 2808
+              pagePosition - afterAboutPosition >= 540 &&
+              pagePosition - afterAboutPosition < 2808
                 ? 'current-page'
                 : ''
             }
@@ -94,21 +91,37 @@ const Navbar = () => {
           <LinkScroll
             to='projects'
             className={
-              pagePosition - afterAboutPosition >= 2808 ? 'current-page' : ''
+              pagePosition - afterAboutPosition >= 2808 &&
+              pagePosition - afterAboutPosition < 4160
+                ? 'current-page'
+                : ''
             }
             closeToggle={closeToggle}
           >
             <li>Projects</li>
           </LinkScroll>
 
-          <li
+          {/* <li
             onClick={() => {
               scroll.scrollToBottom();
               closeToggle();
             }}
           >
             contact info
-          </li>
+          </li> */}
+          <LinkScroll
+            to='contact'
+            className={
+              pagePosition - afterAboutPosition >= 4160
+                ? 'current-page'
+                : ''
+                ? 'current-page'
+                : ''
+            }
+            closeToggle={closeToggle}
+          >
+            <li>contact info</li>
+          </LinkScroll>
         </ul>
       </div>
     </div>
